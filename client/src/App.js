@@ -5,7 +5,6 @@ import "./App.css";
 function App() {
   const [url, setUrl] = useState("");
   const [audio, setAudio] = useState("");
-  const [title, setTitle] = useState("");
 
   const play = async () => {
     try {
@@ -14,7 +13,6 @@ function App() {
       });
 
       setAudio(res.data.audio);
-      setTitle(res.data.title);
     } catch (err) {
       alert("Unable to load audio.");
     }

@@ -7,6 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.post("/", async (req, res) => {
+    res.json({
+        "message": "Server is running"
+    });
+})
+
 app.post("/api/audio", async (req, res) => {
     try {
         const { url } = req.body;
